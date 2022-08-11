@@ -1,16 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useCityContext } from "../Providers/CityProvider";
 import WeatherCard from "./WeatherCard";
 
 const Dashboard = () => {
-  const {
-    handleCityCall,
-    setCityName,
-    cityName,
-    cityData,
-    loadingCity,
-    weatherData,
-  } = useCityContext();
+  const { handleCityCall, setCityName, cityName } = useCityContext();
 
   return (
     <div>

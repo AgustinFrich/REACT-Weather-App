@@ -1,7 +1,6 @@
 import "./App.css";
 import Dashboard from "./Components/Dashboard";
-import React, { useEffect } from "react";
-import useCurrentCity from "./Hooks/useCurrentCity";
+import React from "react";
 import CityContextProvider from "./Providers/CityProvider";
 
 function App() {
