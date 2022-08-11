@@ -9,12 +9,16 @@ const Dashboard = () => {
     <div>
       <div>
         <div>
+          <hr />
+          <hr />
           <input
             value={cityName}
             onChange={(e) => setCityName(e.target.value)}
           ></input>
         </div>
+        <hr />
         <button onClick={() => handleCityCall("")}>Buscar</button>
+        <hr />
 
         <WeatherCard />
       </div>
