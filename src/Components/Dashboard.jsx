@@ -1,21 +1,51 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
-import useEnvironment from '../Hooks/useEnvironment'
+import React, { useEffect } from "react";
+import { useCityContext } from "../Providers/CityProvider";
+import WeatherCard from "./WeatherCard";
 
 const Dashboard = () => {
-const {API_KEY} = useEnvironment()
-
-useEffect(() => {
-  handleApiCall()  
-}, [])
-
-const handleApiCall = async () => {
-  const data = await axios.get();
-}
+  const {
+    handleCityCall,
+    setCityName,
+    cityName,
+    cityData,
+    loadingCity,
+    weatherData,
+  } = useCityContext();
 
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div>
+      <div>
+        <div>
+          <input
+            value={cityName}
+            onChange={(e) => setCityName(e.target.value)}
+          ></input>
+        </div>
+        <button onClick={() => handleCityCall("")}>Buscar</button>
 
-export default Dashboard
+        <WeatherCard />
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
+
+/*
+          <label>Latitud</label>
+            <input
+              value={lat}
+              onChange={(e) => {
+                setLat(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div>
+            <label>Longitud</label>
+            <input
+              value={lon}
+              onChange={(e) => {
+                setLon(e.target.value);
+              }}
+            ></input>
+*/

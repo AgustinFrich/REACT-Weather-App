@@ -1,0 +1,45 @@
+.Weather-Title {
+    color: #FFFFFF;
+    font-size: 2em;
+    text-align: left;
+    margin: 20px;
+}
+
+.Weather-Clima {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    text-decoration: underline dotted;
+}
+
+.Weather-Container {
+    display: inline-flex;
+}
+
+.Weather-Inner-Container {
+    transform: translateY(calc(25%));
+}
+
+.Weather-Max, .Weather-Min {
+    font-size: 2em;
+}
+
+.Weather-Temperature {
+    color: #FFFFFF;
+    margin-right: 25px;
+    font-size: 3em;
+}
+
+.Weather-Max {
+    color: #FF0000AA;
+    align-self: flex-end;
+}
+
+.Weather-Min {
+    align-self: initial;
+    color: #5555FFAA;
+}
+
+.Weather-Svg-Line {
+    fill: #FFFFFFAA;
+    vertical-align: middle;
+}
